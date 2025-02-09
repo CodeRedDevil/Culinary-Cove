@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/simple.css" />
     <link rel="stylesheet" href="./styles/custom.css" />
-    <title>Culinary Cove &bull; <?php echo $pageTitle; ?></title>
+    <?php if (!empty($pageTitle)): ?>
+      <title>Culinary Cove  &bull; <?php echo $pageTitle; ?></title>
+      <?php else: ?>
+        <title>Culinary Cove</title>
+    <?php endif; ?></title>
   </head>
   <body>
+
+        <?php 
+          if(!empty($headerImg)) {
+            $headerImg = 'images/pexels-engin-akyurt-1435904.jpg';
+          }
+        
+        ?>
+
     <header
       class="header-with-background"
       style="background-image: url('<?php echo $headerImg; ?>')"
