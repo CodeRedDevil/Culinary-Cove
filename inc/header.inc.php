@@ -27,9 +27,13 @@
       <h1>Culinary Cove</h1>
       <p>Your sanctuary for exceptional flavors</p>
       <nav>
-        <a href="our-mission.php">Our mission</a>
-        <a href="ingredients.php">Ingredients</a>
-        <a href="menu.php">Menu</a>
+        <a class="<?php if(!empty($pageKey) && $pageKey === 'Mission') echo 'active'; ?>" href="our-mission.php">Our mission</a>
+        <a class="<?php if (!empty($pageKey) && $pageKey === 'Ingredients') echo 'active'; ?>" href="ingredients.php">Ingredients</a>
+        <a 
+        <?php if (!empty($pageKey) && $pageKey === 'Menu'): ?> 
+          class="active"
+        <?php endif; ?> 
+        href="menu.php">Menu</a>
       </nav>
     </header>
 
